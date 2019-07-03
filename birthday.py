@@ -51,4 +51,5 @@ def main():
     b = parsedate(date)
     print(datetime.date(b[-1],b[-3],b[-2]))
     print(calcAge(datetime.date(b[-1],b[-3],b[-2])))
+    print('exiting now....')
 main()
