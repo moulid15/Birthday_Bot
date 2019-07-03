@@ -1,6 +1,8 @@
 from datetime import date
 import datetime
 import time
+import discord
+
 
 def calcAge(born):
     today = date.today()
@@ -45,9 +47,8 @@ def parsedate(stringdate):
     date.append(year)
     return date
 def main():
-    date='October 31st, 2001'
+    date='October 31st 2001'
     b = parsedate(date)
     print(datetime.date(b[-1],b[-3],b[-2]))
     print(calcAge(datetime.date(b[-1],b[-3],b[-2])))
-    #print(calcAge(date(1997, 2, 3)), "years")
 main()
