@@ -3,7 +3,7 @@ from discord.ext import commands
 from birthday import calcAge, parsedate
 from collections import defaultdict
 
-token = 'NTk2MDEyMjMxNjM3MDczOTIx.XRzWmw.jLuhagDih7ujgXFg_mcceaJiTxI'
+token = 
 bot = commands.Bot(command_prefix='!')
 
 datastore = defaultdict(dict)
