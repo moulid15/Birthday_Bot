@@ -9,15 +9,18 @@ bot = commands.Bot(command_prefix='!')
 datastore = defaultdict(dict)
 #for i in b.keys():
 #    await ctx.send(b[i]) ---> 21
-#{serverid : {user:{'birthday': age}}}   b=d[sID][user] ''
-@bot.command(alias='mybday','mybirthday')
-# !mybday or !mybirthday March 2, 1998
-async def mybirthday(ctx,*,arg):
+# DIC -:  {serverid : {user:{'birthday': age}}}   b=d[sID][user] ''
+# @bot.command(alias='mybday','mybirthday')
+# # !mybday or !mybirthday March 2, 1998
+# async def mybirthday(ctx,*,arg):
 
 
-
-@bot.command(alias='birthday','bday')
-async def birthday(ctx, arg:discord.Member):
-     # !bday or !birthday @user ---> March 2, 1998
-     for i in arg:
-         ctx.send('{i.display_name} birthday is on {d[i]}')
+# !age -> get user age
+@bot.command(alias='age')
+async def userAge(ctx,*arg:discord.Member):
+    msg = ctx.message
+    server = msg.guild
+    for i in arg:
+        for j in datastore[server][i].keys()):
+            await ctx.send(str(i.display_name) + " is "+str(j)+ " years old");
+bot.run(token);
