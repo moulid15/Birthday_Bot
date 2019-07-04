@@ -41,15 +41,15 @@ def parsedate(stringdate):
             day = i
     date.append(day)
 
-    for i in range(1920,int(year1)+1):
+    for i in range(1000,int(year1)+1):
         if stringdate.lower().find(str(i)) != -1:
             year = i
     date.append(year)
     return date
-def main():
-    date='October 31st 2001'
-    b = parsedate(date)
-    print(datetime.date(b[-1],b[-3],b[-2]))
-    print(calcAge(datetime.date(b[-1],b[-3],b[-2])))
-    print('exiting now....')
-main()
+# def main():
+#     date='October 31st 2001'
+#     b = parsedate(date)
+#     print(datetime.date(b[-1],b[-3],b[-2]))
+#     print(calcAge(datetime.date(b[-1],b[-3],b[-2])))
+#     print('exiting now....')
+# main()
