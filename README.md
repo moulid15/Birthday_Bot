@@ -14,9 +14,15 @@ https://discordapp.com/api/oauth2/authorize?client_id=596012231637073921&permiss
 
 # using this code
 
+## Install before running
+
+```
+pip3 install discord.py
+```
+
 ### clone <br />
 ```
-https://github.com/moulid15/Birthday_Bot.git
+git clone https://github.com/moulid15/Birthday_Bot.git
 ``` 
 
 ### set up your token on linux  <br />
