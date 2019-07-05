@@ -23,7 +23,6 @@ https://github.com/moulid15/Birthday_Bot.git
 `` cd ``to go home <br /> <br />
 ```
 vi .bashrc
-
 ```
 
 In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
@@ -31,4 +30,4 @@ In the .bashrc file put replace `{token from discord}` with your token <br /> <b
 ```
 export token='{token from discord}
 ```
-
+press `i` to enter vim, then add the the above script
