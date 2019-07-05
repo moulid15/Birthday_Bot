@@ -9,7 +9,7 @@ This discord bot notifies all users when it is someones birthday.
 `.author age` - to get my age <br /> <br />
 `.birthday @user` - to get some users birthday <br /> <br />
 
-# invite your bot
+# Invite bot to a server
 https://discordapp.com/api/oauth2/authorize?client_id=596012231637073921&permissions=8&scope=bot
 
 # using this code
