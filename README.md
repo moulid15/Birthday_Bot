@@ -15,7 +15,7 @@ https://discordapp.com/api/oauth2/authorize?client_id=596012231637073921&permiss
 # using this code
 
 ### clone <br />
-```https://github.com/moulid15/Birthday_Bot.git``` 
+````https://github.com/moulid15/Birthday_Bot.git```` 
 
 ### set up your token on linux  <br />
 `` cd ``to go home <br /> <br />
