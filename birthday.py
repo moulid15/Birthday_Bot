@@ -46,10 +46,29 @@ def parsedate(stringdate):
             year = i
     date.append(year)
     return date
-# def main():
-#     date='October 31st 2001'
-#     b = parsedate(date)
+
+def birthAlert(date):
+    year1, month1, day1, hour1, minute1 = time.strftime("%Y,%m,%d,%H,%M").split(',')
+    b = parsedate((date))
+    if month1[0] == '0' and day1[0] == '0':
+        if b[-2] == int(day1[-1]) and b[-3] == int(month1[-1]):
+            return True
+    elif month1[0] == '0':
+        print('entering...')
+        if b[-2] == int(day1) and b[-3] == int(month1[-1]):
+            return True
+    elif day1[0] == '0':
+        print('entering..')
+        if b[-2] == int(day1) and b[-3] == int(month1[-1]):
+            return True
+    return False
+
+def main():
+    year1, month1, day1, hour1, minute1 = time.strftime("%Y,%m,%d,%H,%M").split(',')
+    # print(month1)
+    date='July 4, 2019'
+    print(birthAlert(date))
 #     print(datetime.date(b[-1],b[-3],b[-2]))
 #     print(calcAge(datetime.date(b[-1],b[-3],b[-2])))
 #     print('exiting now....')
-# main()
+main()
