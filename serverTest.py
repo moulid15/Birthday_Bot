@@ -68,11 +68,11 @@ async def birthday(ctx, *arg:discord.Member):
              loading = (json.load(jsonFile))
          for i in arg:
              print(i)
-             if i in loading[str(message.guild.id)][str(i)]:
+             if str(i) in loading[str(message.guild.id)]:
                  for j in loading[str(message.guild.id)][str(i)]:
                      await ctx.send('``'+str(i.display_name)+'``\'s'+' birthday is on ``'+ str(j)+'``')
              else:
-                await ctx.send('please put your birthday for example : ``.mybday March 2, 1998`` ')
+                await ctx.send('this person is not in the database. please put your birthday for example : ``.mybday March 2, 1998`` ')
 
 @bot.command(aliases=['myAge','myage'])
 async def meage(ctx):
