@@ -15,11 +15,23 @@ https://discordapp.com/api/oauth2/authorize?client_id=596012231637073921&permiss
 # using this code
 
 ### clone <br />
-````https://github.com/moulid15/Birthday_Bot.git```` 
+```
+https://github.com/moulid15/Birthday_Bot.git
+
+``` 
 
 ### set up your token on linux  <br />
 `` cd ``to go home <br /> <br />
-```vi .bashrc```<br /> <br />
+
+```
+vi .bashrc
+
+```
+
 In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
-```export token='{token from discord}``` <br />
+
+```
+export token='{token from discord}
+
+```
 
