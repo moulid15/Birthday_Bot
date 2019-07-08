@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands,tasks
-from birthday import calcAge, parsedate,birthAlert
+from birthday import calcAge, parsedate, birthAlert
 from collections import defaultdict
 from datetime import date
 import datetime
@@ -25,7 +25,7 @@ async def on_ready():
 #{serverid : [{user:{'birthday': age}}},{user:{'birthday': age}}]   d=datastore[server][i]
 # !mybday or !mybirthday March 2, 1998
 @bot.command(aliases=['mybday','enter'])
-async def mybirthday(ctx,*,arg):
+async def mybirthday(ctx,*,arg): # command for giving the bot you birthday
     message = ctx.message
 
     date = parsedate((arg))
@@ -52,7 +52,7 @@ async def mybirthday(ctx,*,arg):
 
 
 @bot.command( aliases = ['birth','born'])
-async def birthday(ctx, *arg:discord.Member):
+async def birthday(ctx, *arg:discord.Member):  # getting a mentioned users birthday
      # !bday or !birthday @user ---> March 2, 1998
      message = ctx.message
      truth = False
@@ -73,7 +73,7 @@ async def testing(ctx):
     await ctx.send('.mybirthday March 20,1980')
 
 @bot.command(aliases=['myAge','myage'])
-async def meage(ctx):
+async def meage(ctx):    #comman for looking at you own age
     message = ctx.message
     birth = 0
     if os.path.exists(filename):
@@ -103,7 +103,7 @@ async def author(ctx,*arg):
 
 
 @bot.command(aliases=['old'])
-async def age(ctx,*arg:discord.Member):
+async def age(ctx,*arg:discord.Member): #command for checking a metioned usre's age
     msg = ctx.message
     server = str(msg.guild.id)
     if os.path.exists(filename):
@@ -119,7 +119,7 @@ async def age(ctx,*arg:discord.Member):
 
 
 @tasks.loop(hours=12)
-async def bdayReminder():
+async def bdayReminder():  #background task for reminding all users in the server that it is a certain user's birthday
     if os.path.exists(filename):
         with open(filename,'r') as jsonFile:
             loading = (json.load(jsonFile))
