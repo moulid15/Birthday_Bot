@@ -36,7 +36,6 @@ def parsedate(stringdate):
     date.append(month)
 
     for i in range(1,32):
-       # print(i)
         if stringdate[:-5].lower().find(str(i)) !=-1:
             day = i
     date.append(day)
@@ -65,7 +64,6 @@ def birthAlert(date):
 
 def main():
     year1, month1, day1, hour1, minute1 = time.strftime("%Y,%m,%d,%H,%M").split(',')
-    # print(month1)
     date='July 4, 2019'
     print(birthAlert(date))
 #     print(datetime.date(b[-1],b[-3],b[-2]))
