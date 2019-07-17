@@ -31,12 +31,12 @@ git clone https://github.com/moulid15/Birthday_Bot.git
 vi .bashrc
 ```
 
-In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
+In the .bashrc file replace `{token from discord}` with your token <br /> <br />
 
 ```
 export token='{token from discord}
 ```
-press `i` to enter vim, then add the the above script
+press `i` to enter vim, then add the the above script.
 
 ### set up your token on macOS  <br />
 `` cd ``to go home <br /> <br />
