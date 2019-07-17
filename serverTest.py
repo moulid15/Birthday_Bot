@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands,tasks
-from birthday import calcAge, parsedate, birthAlert
+from birthday import calcAge, parsedate,birthAlert
 from collections import defaultdict
 from datetime import date
 import datetime
@@ -24,7 +24,7 @@ async def on_ready():
 #{serverid : [{user:{'birthday': age}}},{user:{'birthday': age}}]   d=datastore[server][i]
 # !mybday or !mybirthday March 2, 1998
 @bot.command(aliases=['mybday','enter'])
-async def mybirthday(ctx,*,arg): # command for giving the bot you birthday
+async def mybirthday(ctx,*,arg):
     message = ctx.message
     Truth = True
     date = parsedate((arg))
@@ -59,13 +59,8 @@ async def mybirthday(ctx,*,arg): # command for giving the bot you birthday
         print('exiting ready....')
 
 
-<<<<<<< HEAD
 @bot.command( aliases = ['birth'])
 async def birthday(ctx, *arg:discord.Member):
-=======
-@bot.command( aliases = ['birth','born'])
-async def birthday(ctx, *arg:discord.Member):  # getting a mentioned users birthday
->>>>>>> 7f320025b5a1b420526071e09af7adff70222065
      # !bday or !birthday @user ---> March 2, 1998
      message = ctx.message
      truth = False
@@ -99,7 +94,7 @@ async def born(ctx):
              await ctx.send('You are not in the database. please put your birthday for example : ``.mybday March 2, 1998`` ')
 
 @bot.command(aliases=['myAge','myage'])
-async def meage(ctx):    #comman for looking at you own age
+async def meage(ctx):
     message = ctx.message
     birth = 0
     if os.path.exists(filename):
@@ -129,7 +124,7 @@ async def author(ctx,*arg):
 
 
 @bot.command(aliases=['old'])
-async def age(ctx,*arg:discord.Member): #command for checking a metioned usre's age
+async def age(ctx,*arg:discord.Member):
     msg = ctx.message
     server = str(msg.guild.id)
     if os.path.exists(filename):
@@ -144,14 +139,9 @@ async def age(ctx,*arg:discord.Member): #command for checking a metioned usre's 
                             await ctx.send(str(i.display_name) + " is ``"+str(h)+ "`` years old");
 
 
-<<<<<<< HEAD
 
 @tasks.loop(hours=13)
 async def bdayReminder():
-=======
-@tasks.loop(hours=12)
-async def bdayReminder():  #background task for reminding all users in the server that it is a certain user's birthday
->>>>>>> 7f320025b5a1b420526071e09af7adff70222065
     if os.path.exists(filename):
         with open(filename,'r') as jsonFile:
             loading = (json.load(jsonFile))

@@ -9,10 +9,10 @@ import json
 import asyncio
 import os
 
-token = os.environ.get('testerToken')  #try to get my token now hacker
+token = os.environ.get('BdayToken')  #try to get my token now hacker
 bot = commands.Bot(command_prefix='.')
 datastore = defaultdict(list)
-filename = 'Data3.json'
+filename = 'Data.json'
 littledict = defaultdict(list)
 
 
