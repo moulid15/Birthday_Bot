@@ -59,7 +59,7 @@ for ``{token}`` you should have the name of your environment variable in your .b
 ```
 token = os.environ.get('{token}')
 ```
-##### Running
+### Running
 
 ```
 python3 finalProduct.py
