@@ -36,20 +36,30 @@ In the .bashrc file replace `{token from discord}` with your token <br /> <br />
 ```
 export token='{token from discord}
 ```
+<br /> <br />
 press `i` to enter vim, then add the the above script.
+for ``{token}`` you should have the name of your environment variable in your .bashrc
+```
+token = os.environ.get('{token}')
+```
+
 
 ### set up your token on macOS  <br />
 `` cd ``to go home <br /> <br />
+In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
 ```
 vi .bash_profile
 ```
-
-In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
-
+<br /> <br />
+press `i` to enter vim, then add the script below and after you want to do the same in the terminal
 ```
 export token='{token from discord}
 ```
-press `i` to enter vim, then add the the above script
+for ``{token}`` you should have the name of your environment variable in your .bashrc
+```
+token = os.environ.get('{token}')
+```
+##### Running
 
 ```
 python3 finalProduct.py
