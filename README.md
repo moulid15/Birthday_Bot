@@ -48,7 +48,7 @@ token = os.environ.get('{token}')
 
 ### set up your token on macOS  <br />
 `` cd ``to go home <br /> <br />
-In the .bashrc file put replace `{token from discord}` with your token <br /> <br />
+In the ``.bash_profile`` file put replace `{token from discord}` with your token <br /> <br />
 ```
 vi .bash_profile
 ```
@@ -57,7 +57,7 @@ press `i` to enter vim, then add the script below and after you want to do the s
 ```
 export token='{token from discord}
 ```
-for ``{token}`` you should have the name of your environment variable in your .bashrc
+for ``{token}`` you should have the name of your environment variable in your ``.bash_profile`` file
 ```
 token = os.environ.get('{token}')
 ```
