@@ -52,6 +52,6 @@ export token='{token from discord}
 press `i` to enter vim, then add the the above script
 
 ```
-python3 servertest.py
+python3 finalProduct.py
 ```
 This will run the bot
