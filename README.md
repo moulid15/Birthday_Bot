@@ -2,7 +2,7 @@
 This discord bot notifies all users when it is someones birthday.Also get there age and birthday that they gave the bot. <br /> This bot also alerts all users in the server if it is someone's birthday.
 
 # Commands:
-`.mybirthday Month,day,year` - you must do this to put you birthday before anything. arguments example `March 2, 1998`<br /> <br />
+`.mybirthday Month day,year` - you must do this to put you birthday before anything. arguments example `March 2, 1998`<br /> <br />
 `.age @user` - this gives all the mentioned users age: Example: `.age @snow @user2 @user3` for multiple user's age <br /> <br />
 
 `.born` - to get your own birthday <br /> <br />
