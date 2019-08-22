@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands,tasks
-from birthday import calcAge, parsedate,birthAlert
+from birthday import calcAge, parsedate,birthAlert,dateDiffer
 from collections import defaultdict
 from datetime import date
 import datetime
@@ -9,7 +9,7 @@ import json
 import asyncio
 import os
 
-token = os.environ.get('BdayToken')  #try to get my token now hacker
+token = 'NjE0MTM0MTg4NDA4NDM4Nzg0.XV7DHg.bkpGr3JLei1xwXEE_sCFAiu0Dyc' #try to get my token now hacker
 bot = commands.Bot(command_prefix='.')
 datastore = defaultdict(list)
 filename = 'Data.json'
@@ -120,6 +120,37 @@ async def author(ctx,*arg):
             await ctx.send(f'Snow\'s birthday is on ``{birth}`` ')
         else:
             await ctx.send('give the comman these arguments: ``age``,  ``born``, ``birth``')
+
+@bot.command(aliases =['agedifference','difference', 'dif','far'])
+async def length(ctx, arg:discord.Member):
+    other = arg
+    msg = ctx.message
+    yourBirth = ''
+    otherBirth = ''
+    l =[]
+    server = str(msg.guild.id)
+    if os.path.exists(filename):
+        with open(filename,'r') as jsonFile:
+            loading = (json.load(jsonFile))
+
+        for j in loading[str(msg.guild.id)]:
+            if str(other) in j:
+                for k in j:
+                    for i in j[str(k)].keys():
+                        otherBirth = i
+
+        for j in loading[str(msg.guild.id)]:
+            if str(msg.author) in j:
+                for k in j:
+                    for i in j[str(k)].keys():
+                        yourBirth = i
+        birthDiff = dateDiffer(yourBirth, otherBirth)
+        if birthDiff < 0 :
+            await ctx.send(f'I am ``{abs(birthDiff)}``  days older than ``{other.display_name}``')
+        else:
+            await ctx.send(f'`{other.display_name}`  is ``{abs(birthDiff)}`` days older than me')
+
+    # print(l[0][(msg.author)].keys())
 
 
 
